@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Source+Code+Pro:ital,wght@1,500&display=swap');
+/* Estrutura da página */
+*{
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+}
+
+body{
+    background-color:lightslategrey;
+    font-family: 'Source Code Pro', monospace;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+/* Header para ajuste */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+}
+/* Ajuste do Form */
+.divForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ajuste do Radio Button */
+.divInput{
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    border: 1px solid;
+}
+
+.labelInput{
+    flex-direction: row;
+}
+
+input{
+    border: none;
+}
+
+/* Ajuste do Radio button */
+.divRadioButton{
+    border:1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 25px;
+}
+
+.inputRadio{
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 10px 0;
+    padding: 10px;
+}
+
+/* Divs para saída do texto */
+.divText{
+    border: 1px solid;
+    align-items: center;
+    justify-content: center;
+    display:flex ;
+}
+
+.conteudoText{
+    border: 1px solid;
+    display: flex;
+    background-color: aliceblue;
+    width: 150px;
+    height: 30px;
+    align-items: center;
+    justify-content: center
+}
