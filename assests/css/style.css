@@ -8,8 +8,11 @@
 }
 
 body{
-    background-color:lightslategrey;
+    background-image: linear-gradient(#b11111c4,rgb(12, 12, 169));
     font-family: 'Source Code Pro', monospace;
+    display: flex;
+    flex-direction: column;
+    color: #f3e9e9;
 }
 
 html,body{
@@ -22,21 +25,25 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid;
 }
 /* Ajuste do Form */
 .divForm{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    margin: 15px;
+
 }
 
 /* Ajuste do Radio Button */
 .divInput{
     display: flex;
     flex-direction: row;
-    padding: 50px;
-    border: 1px solid;
+    align-items: center;
+    justify-content: center ;
+    padding: 15px;
 }
 
 .labelInput{
@@ -49,39 +56,72 @@ input{
 
 /* Ajuste do Radio button */
 .divRadioButton{
-    border:1px solid;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-
-    padding: 25px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
 }
 
 .inputRadio{
-    border: 1px solid;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     margin: 10px 0;
     padding: 10px;
 }
 
+p{
+    padding: 15px;
+}
+
 /* Divs para saída do texto */
 .divText{
-    border: 1px solid;
     align-items: center;
     justify-content: center;
     display:flex ;
+    padding: 15px;
 }
 
 .conteudoText{
-    border: 1px solid;
     display: flex;
     background-color: aliceblue;
-    width: 150px;
-    height: 30px;
+    width: 140px;
+    height: 25px;
     align-items: center;
     justify-content: center
+}
+
+/* Ajuste da imagem */
+.divImg{
+    justify-content:center;
+    align-items: center;
+    display: flex;
+}
+
+img{
+    width: 250px;
+    display: flex;  
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 200px;
+}
+
+/* Ajuste do botão */
+
+.divButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding:15px;
+}
+
+button{
+    width: 90px;
+    background-color: peru;
+    border-radius: 20px;
+    font-family: 'Source Code Pro', monospace;
+}
+
+button:hover{
+    transition: 2s;
 }

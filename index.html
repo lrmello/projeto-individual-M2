@@ -10,31 +10,51 @@
 <body>
     <header>
         <h1>Decodificador de Cesar</h1>
+    
     </header>
     <div class="divForm">
         <form>
             <div class="divInput">
-                <label for="" class="labelInput">Digite seu nome:</label>
-                <input type="text" class="inputUser" id="name-forms" required onclick="validadigitacao()">
+                <label for="" class="labelInput">Digite alguma coisa: </label>
+                <input type="text" class="inputUser" id="name-forms" required onclick="validaDigitacao()">
             </div>
 
-            <div class="divRadioButton">
-                <p>Escolha a opção desejada:</p>
-                <label for="">Codificada</label>
-                <input type="radio" name="codificada" id="input1" class="inputRadio" value="Codificada">
-                <label for="">Descodificada</label>
-                <input type="radio" name="descodificada" id="input2" class="inputRadio" value="Codificada">
-                <label for="">Palavra normal</label>
-                <input type="radio" name="normal" id="input3" class="inputRadio" value="Codificada">
-            </div>
-            <div class="divText">
-                Texto que irá sair:
-                <div class="conteudoText">
-                    <span></span>
+                <div class="divRadioButton">
+                    <p>Escolha a opção desejada:</p>
+                <div class="divLabel">
+                    <input type="radio" name="opcao1" id="input2" class="inputRadio" value="descodificada" required>
+                    <label for="descodificada">Descodificada</label>
+                </div>
+                <div class="divLabel">
+                    <input type="radio" name="opcao2" id="input1" class="inputRadio" value="codificada" required >
+                    <label for="codificada">Palavra normal</label>
                 </div>
             </div>
+
+            <div class="divText">
+                    Texto que irá sair em base64:
+                    <div class="conteudoText">
+                        <span></span>
+                    </div>
+             <div class="divText">
+                    Texto que irá sair normal:
+                    <div class="conteudoText">
+                        <span></span>
+                 </div>
+            </div>
+       
         </form>
+  
     </div>  
+    <div class="divButton">
+        <button type="submit" value="Enviar">Enviar</button>
+    </div>
+    
+    <div class="divImg">
+        <img src="/assests/img/julio.jpg" alt="" oninput="envioDados()">
+    </div>
+
+   
     <script src="assests/js/script.js"></script>
 </body>
 </html>
