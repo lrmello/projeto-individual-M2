@@ -131,3 +131,29 @@ button{
 button:hover{
     transition: 2s;
 }
+
+/* Em caso de erro ou acerto de preenchimento */
+.div-input-error{
+    width:80%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .div-input-error .label-input{
+    color: red;
+  }
+  
+  .div-input-set{
+    width:80%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .div-input-set span{
+      color:#2e770f;
+  }
+  
+  .div-input-set .label-input{
+     border-color:#2e770f;
+  
+  }
