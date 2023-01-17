@@ -16,17 +16,17 @@
         <form>
             <div class="divInput">
                 <label for="" class="labelInput">Digite alguma coisa: </label>
-                <input type="text" class="inputUser" id="name-forms" required onclick="validaDigitacao()">
+                <input type="text" class="inputUser" id="name-forms" required oninput="validaDigitacao()">
             </div>
 
                 <div class="divRadioButton">
                     <p>Escolha a opção desejada:</p>
                 <div class="divLabel">
-                    <input type="radio" name="opcao1" id="input2" class="inputRadio" value="descodificada" required>
+                    <input type="radio" name="opcao" id="input1" class="inputRadio" value="descodificada" required>
                     <label for="descodificada">Descodificada</label>
                 </div>
                 <div class="divLabel">
-                    <input type="radio" name="opcao2" id="input1" class="inputRadio" value="codificada" required >
+                    <input type="radio" name="opcao" id="input2" class="inputRadio" value="codificada" required >
                     <label for="codificada">Palavra normal</label>
                 </div>
             </div>
@@ -52,6 +52,6 @@
     </div>
 
    
-    <script src="assests/js/script.js"></script>
+    <script src="./assests/js/script.js"></script>
 </body>
 </html>
