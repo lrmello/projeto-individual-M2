@@ -15,8 +15,8 @@
     <div class="divForm">
         <form>
             <div class="divInput">
-                <label for="" class="labelInput">Digite alguma coisa: </label>
-                <input type="text" class="inputUser" id="name-forms" required oninput="validaDigitacao()">
+                <label for="" class="labelInput" id="labelInput">Digite alguma coisa: </label>
+                <input type="text" class="inputUser" id="nameForms" required onclick="validaDigitacao()">
                 <span></span>
             </div>
 
@@ -24,20 +24,20 @@
                     <p>Escolha a opção desejada:</p>
                 <div class="divLabel">
                     <input type="radio" name="opcao" id="input1" class="inputRadio" value="descodificada" required>
-                    <label for="descodificada">Descodificada</label>
+                    <label for="descodificada">Decodificada base64</label>
                 </div>
                 <div class="divLabel">
                     <input type="radio" name="opcao" id="input2" class="inputRadio" value="codificada" required >
-                    <label for="codificada">Palavra normal</label>
+                    <label for="codificada">Cifra de Cesar</label>
                 </div>
             </div>
 
             <div class="divText">
-                Texto que irá sair em base64:<textarea name="" id="textBase"></textarea>
+                Texto que irá sair em base64:<textarea name="" id="textBase" oninput=""></textarea>
         
                     </div>
              <div class="divText">
-                Texto que irá sair normal:<textarea name="" id="textNormal"></textarea>
+                Texto que irá sair em cifra de Cesar:<textarea name="" id="textCifra" oninput=""></textarea>
                  </div>
             </div>
        

@@ -1,5 +1,6 @@
-const inserirText = document.querySelector('.labelInput')
-const saidaText = document.querySelector('textarea')
+const inserirText = document.querySelector('.inputUser')
+const saidaCifra = document.querySelector('#textCifra')
+const saidaBase = document.querySelector('#textBase')
 const regex = /^([a-zA-Z]+)$/
 
 // valida se o usuário está preenchendo o nome de forma correta
@@ -14,10 +15,22 @@ function validaDigitacao(){
     }
 }
 
-function envioDados(){
+// Função para estrutura de condição RadioButton
+function validaDados(){
 
 }
 
+// Função para validação da cifra
+function envioDadosCifra(){
+
+}
+
+// Função para validação da base64
+function envioDadosBase(){
+    
+}
+
+// funções para identificar se o usuário digitou a palavra de forma correta
 function msgErro(){
     const control = saida.parentElement
     control.className = 'div-input-error'

@@ -10,6 +10,7 @@
 body{
     background-image: linear-gradient(#b11111c4,rgb(12, 12, 169));
     font-family: 'Source Code Pro', monospace;
+    font-size: 15px;
     display: flex;
     flex-direction: column;
     color: #f3e9e9;
@@ -23,6 +24,7 @@ html,body{
 
 /* Header para ajuste */
 header{
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,21 +141,52 @@ button:hover{
     flex-direction: column;
   }
   
-  .div-input-error .label-input{
+.div-input-error .labelInput{
     color: red;
-  }
+}
   
-  .div-input-set{
+.div-input-set{
     width:80%;
     display: flex;
     flex-direction: column;
-  }
+}
   
-  .div-input-set span{
+.div-input-set span{
       color:#2e770f;
-  }
+}
   
-  .div-input-set .label-input{
+.div-input-set .labelInput{
      border-color:#2e770f;
   
-  }
+}
+/* Responsividade formulário mobile*/
+@media screen and (max-width: 767px){
+    body{
+        font-size: 13px;
+    }
+
+    header{
+        display:flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .divForm{
+        padding:15px 0;
+    }
+    .divText{
+        padding:15px 0;
+    }
+
+    .divRadioButton{
+        padding:15px 0;
+    }
+
+    .divButton{
+        padding:15px 0;
+    }
+
+    .divImg{
+        padding:10px 0;
+    }
+}
