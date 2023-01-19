@@ -1,7 +1,52 @@
 const inserirText = document.querySelector('.inputUser')
-const saidaCifra = document.querySelector('#textCifra')
-const saidaBase = document.querySelector('#textBase')
-const regex = /^([a-zA-Z]+)$/
+const saidaText = document.querySelector('#textArea')
+const cod = document.querySelector('#cod')
+const decod = document.querySelector('#decod')
+const enviar = document.querySelector('#enviar')
+const select = document.querySelector('#selecionarMenu')
+const botaoR = document.querySelector('.divRadioButton')
+const botao = document.querySelector('#enviar')
+
+// Função para validação da cifra
+function envioDadosCifra(){
+
+}
+
+// Função para validação da base64
+function envioDadosBase64(){
+    const text = document.querySelector('#textArea').value
+
+    if(cod.checked){
+        const cod = btoa(text)
+        return cod
+    }else if(decod.checked){
+        const decod = atob(cod)
+        return decod
+    }
+}
+
+// No click do botão, ele constará a opção correta que será decodificada ou codificada
+botaoR.addEventListener('click', function () {
+        if (cod.checked) {
+            botao.innerHTML = 'Codificado'
+        } else if (decod.checked) {
+            botao.innerHTML = 'Decodificado'
+        }
+ })
+ 
+// Aqui está o registro do evento por único elemento com o click
+botao.addEventListener('click',(e)=>{
+    const selectValue = select.value
+    e.preventDefault()
+    if(selectValue === 'Base64'){
+        rest.innerHTML = envioDadosBase64()
+        msg.classList.toggle('adadkaj')
+    } else if(selectValue === 'Cifra de Cesar'){
+        rest.innerHTML = envioDadosCifra()
+}
+})
+
+
 
 // valida se o usuário está preenchendo o nome de forma correta
 function validaDigitacao(){
@@ -13,21 +58,6 @@ function validaDigitacao(){
         msgAcerto(inserirText,"Texto correto")
         return true
     }
-}
-
-// Função para estrutura de condição RadioButton
-function validaDados(){
-
-}
-
-// Função para validação da cifra
-function envioDadosCifra(){
-
-}
-
-// Função para validação da base64
-function envioDadosBase(){
-    
 }
 
 // funções para identificar se o usuário digitou a palavra de forma correta

@@ -1,192 +1,198 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Source+Code+Pro:ital,wght@1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Source+Code+Pro:ital,wght@1,500&display=swap");
 /* Estrutura da página */
-*{
-    margin: 0;
-    padding: 0;
-    
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  font-family: "Source Code Pro", monospace;
 }
 
-body{
-    background-image: linear-gradient(#b11111c4,rgb(12, 12, 169));
-    font-family: 'Source Code Pro', monospace;
-    font-size: 15px;
-    display: flex;
-    flex-direction: column;
-    color: #f3e9e9;
-    scroll-behavior: smooth;
+body {
+  background-image: linear-gradient(#b11111c4, rgb(12, 12, 169));
+
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  color: #f3e9e9;
+  scroll-behavior: smooth;
 }
 
-html,body{
-    width: 100%;
-    height: 100%;
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
 
 /* Header para ajuste */
-header{
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+header {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 /* Ajuste do Form */
-.divForm{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 15px;
-    margin: 15px;
-
+.divForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+  margin: 15px;
 }
 
-/* Ajuste do Radio Button */
-.divInput{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center ;
-    padding: 15px;
+/* Ajuste do input*/
+.divInput {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
 }
 
-.labelInput{
-    flex-direction: row;
+.labelInput {
+  flex-direction: row;
 }
 
-input{
-    border: none;
+input {
+  border: none;
+  border-radius: 5px;
 }
 
 /* Ajuste do Radio button */
-.divRadioButton{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
+.divRadioButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
 }
 
-.inputRadio{
-    margin: 10px 0;
-    padding: 10px;
+.inputRadio {
+  margin: 10px 0;
+  padding: 10px;
 }
 
-p{
-    padding: 15px;
+p {
+  padding: 15px;
 }
 
 /* Divs para saída do texto */
-.divText{
-    align-items: center;
-    justify-content: center;
-    display:flex ;
-    padding: 15px;
+.divText {
+  color: black;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 10px;
+
+  background-color: white;
+  height: 150px;
+  width: 300px;
 }
-
-textarea{
-    resize: none;
-    border-radius: 10px;
-
-    width: 190px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    font-size: 1rem;
-}
-
 
 /* Ajuste da imagem */
-.divImg{
-    justify-content:center;
-    align-items: center;
-    display: flex;
+.divImg {
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
-img{
-    width: 250px;
-    display: flex;  
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 200px;
+img {
+  width: 250px;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 200px;
 }
 
 /* Ajuste do botão */
 
-.divButton{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding:15px;
+.divButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
 }
 
-button{
-    width: 90px;
-    background-color: peru;
-    border-radius: 20px;
-    font-family: 'Source Code Pro', monospace;
+button {
+  width: 90px;
+  background-color: peru;
+  border-radius: 20px;
+  font-family: "Source Code Pro", monospace;
 }
 
-button:hover{
-    transition: 2s;
+button:hover {
+  transition: 2s;
 }
 
 /* Em caso de erro ou acerto de preenchimento */
-.div-input-error{
-    width:80%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-.div-input-error .labelInput{
-    color: red;
+.div-input-error {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
 }
-  
-.div-input-set{
-    width:80%;
-    display: flex;
-    flex-direction: column;
+
+.div-input-error .labelInput {
+  color: red;
 }
-  
-.div-input-set span{
-      color:#2e770f;
+
+.div-input-set {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
 }
-  
-.div-input-set .labelInput{
-     border-color:#2e770f;
-  
+
+.div-input-set span {
+  color: #2e770f;
 }
+
+.div-input-set .labelInput {
+  border-color: #2e770f;
+}
+
+/* Ajuste do Select */
+.selecionarMenu {
+  width: 220px;
+  display: flex;
+  text-align: center;
+  padding: 5px;
+  margin: 10px;
+}
+
 /* Responsividade formulário mobile*/
-@media screen and (max-width: 767px){
-    body{
-        font-size: 13px;
-    }
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 13px;
+    text-align: center;
+  }
 
-    header{
-        display:flex;
-        justify-content: center;
-        text-align: center;
-    }
+  header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
 
-    .divForm{
-        padding:15px 0;
-    }
-    .divText{
-        padding:15px 0;
-    }
+  .divForm {
+    padding: 15px 0;
+  }
+  .divText {
+    padding: 15px 0;
+  }
 
-    .divRadioButton{
-        padding:15px 0;
-    }
+  .divRadioButton {
+    padding: 15px 0;
+  }
 
-    .divButton{
-        padding:15px 0;
-    }
+  .divButton {
+    padding: 15px 0;
+  }
 
-    .divImg{
-        padding:10px 0;
-    }
+  .divImg {
+    padding: 10px 0;
+  }
 }

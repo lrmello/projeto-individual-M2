@@ -1,58 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Decodificador</title>
-    <link rel="stylesheet" href="./assests/css/style.css">
-</head>
-<body>
-    <header>
-        <h1>Decodificador de Cesar</h1>
-    
-    </header>
-    <div class="divForm">
-        <form>
+    <link rel="stylesheet" href="./assests/css/style.css" />
+  </head>
+  <body>
+            <header>
+            <h1>Decodificador de Cesar</h1>
+            </header>
+            <form class="divForm">
+            <p>
+                Em baixo sairá a mensagem decriptografada ou criptografada em base64 ou
+                Cifra de Cesar
+            </p>
+            <p>Digite algum texto para que possa criptografar ou decodificada</p>
             <div class="divInput">
-                <label for="" class="labelInput" id="labelInput">Digite alguma coisa: </label>
-                <input type="text" class="inputUser" id="nameForms" required onclick="validaDigitacao()">
+                <label for="" class="labelInput" id="labelInput"
+                >Digite alguma coisa:
+                </label>
+                <input type="text" class="inputUser" id="nameForms" required />
                 <span></span>
             </div>
 
-                <div class="divRadioButton">
-                    <p>Escolha a opção desejada:</p>
+            <label div="divText" for="range"
+                >Texto que irá sair em base64 ou em Cifra de Cesar:</label
+            >
+            <select name="selecionar" class="selecionarMenu" id="selecionarMenu">
+                <option value="selecione" disabled="">Selecione a criptografia</option>
+                <option value="base64">Base64</option>
+                <option value="cifra">Cifra de césar</option>
+            </select>
+
+            <div class="divRadioButton">
+                <p>Escolha a opção desejada:</p>
                 <div class="divLabel">
-                    <input type="radio" name="opcao" id="input1" class="inputRadio" value="descodificada" required>
-                    <label for="descodificada">Decodificada base64</label>
+                <input type="radio" name="opcao" id="cod" class="inputRadio" value="descodificada" required/>
+                <label for="descodificada">Codificar</label>
                 </div>
+
                 <div class="divLabel">
-                    <input type="radio" name="opcao" id="input2" class="inputRadio" value="codificada" required >
-                    <label for="codificada">Cifra de Cesar</label>
+                <input type="radio" name="opcao" id="decod" class="inputRadio"value="codificada"required />
+                <label for="codificada">Decodificar</label>
                 </div>
             </div>
 
+            <div class="divTexto">
+                <p>Aqui sairá o texto codificado ou decodificado:</p>
+            </div>
             <div class="divText">
-                Texto que irá sair em base64:<textarea name="" id="textBase" oninput=""></textarea>
-        
-                    </div>
-             <div class="divText">
-                Texto que irá sair em cifra de Cesar:<textarea name="" id="textCifra" oninput=""></textarea>
-                 </div>
+                <span id="textArea"></span>
             </div>
-       
-        </form>
-  
-    </div>  
-    <div class="divButton">
-        <button type="submit" value="Enviar">Enviar</button>
-    </div>
-    
-    <div class="divImg">
-        <img src="./assests/img/julio.jpg" alt="" oninput="envioDados()">
-    </div>
+            </form>
+            
+            <div class="divButton">
+            <button type="submit" value="Enviar" id="enviar">Codificar</button>
+            </div>
 
-   
-    <script src="./assests/js/script.js"></script>
-</body>
+            <div class="divImg">
+            <img src="./assests/img/julio.jpg" alt="" oninput="envioDados()" />
+            </div>
+
+            <script src="./assests/js/script.js"></script>
+  </body>
 </html>
