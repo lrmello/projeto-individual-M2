@@ -6,64 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Decodificador</title>
     <link rel="stylesheet" href="./assests/css/style.css" />
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="./assests/img/icon.png" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-            <header>
-            <h1>Decodificador de Cesar</h1>
-            </header>
-            <form class="divForm">
-            <p>
-                Em baixo sairá a mensagem decriptografada ou criptografada em base64 ou
-                Cifra de Cesar
-            </p>
-            <p>Digite algum texto para que possa criptografar ou descriptografar</p>
-            <div class="divInput">
-                <label for="" class="labelInput" id="labelInput"
-                >Digite alguma coisa:
-                </label>
-                <input type="text" class="inputUser" id="nameForms" required />
-                <span></span>
-            </div>
+    <header>
+      <h1>Decodificador de Cesar</h1>
+    </header>
+    <form class="divForm">
+      <p>
+        Em baixo sairá a mensagem decriptografada ou criptografada em base64 ou
+        Cifra de Cesar
+      </p>
+      <p>Digite algum texto para que possa criptografar ou descriptografar</p>
+      <div class="divInput">
+        <label for="" class="labelInput" id="labelInput"
+          >Digite alguma coisa:
+        </label>
+        <input type="text" class="inputUser" id="nameForms" required />
+        <span></span>
+      </div>
 
-            <label div="divText" for="range"
-                >Texto que irá sair em base64 ou em Cifra de Cesar:</label
-            >
-            <select name="selecionar" class="selecionarMenu" id="selecionarMenu">
-                <option value="selecione" disabled="">Selecione a criptografia</option>
-                <option value="base64">Base64</option>
-                <option value="cifra">Cifra de césar</option>
-            </select>
+      <label div="divText" for="range">Texto que irá sair em base64 ou em Cifra de Cesar:</label
+      >
+      <select name="selecionar" class="selecionarMenu" id="selecionarMenu">
+        <option value="selecione" disabled="">Selecione a criptografia</option>
+        <option value="base64">Base64</option>
+        <option value="cifra">Cifra de César</option>
+      </select>
 
-            <div class="divRadioButton">
-                <p>Escolha a opção desejada:</p>
-                <div class="divLabel">
-                <input type="radio" name="opcao" id="cod" class="inputRadio" value="descodificada" required/>
-                <label for="descodificada">Codificar</label>
-                </div>
+      <div class="containerCh">
+        <div class="slide">
+          <label for="" class="chDefinir">Defina a chave:</label>
+          <input class="chDefinir" type="number" min="1" max="26" id="rangeNum" class="tamRange" oninput="envioDadosCifra()"/>
+        </div>
+      </div>
 
-                <div class="divLabel">
-                <input type="radio" name="opcao" id="decod" class="inputRadio"value="codificada"required />
-                <label for="codificada">Decodificar</label>
-                </div>
-            </div>
+      <div class="divRadioButton">
+        <p>Escolha a opção desejada:</p>
+        <div class="divLabel">
+          <input type="radio" name="opcao" id="cod" class="inputRadio"value="descodificada" required/>
+          <label for="descodificada">Codificar</label>
+        </div>
 
-            <div class="divTexto">
-                <p>Aqui sairá o texto codificado ou decodificado:</p>
-            </div>
-            <div class="divText">
-                <span id="textArea"></span>
-            </div>
-            </form>
+        <div class="divLabel">
+          <input type="radio"name="opcao"id="decod"  class="inputRadio" value="codificada"required/>
+          <label for="codificada">Decodificar</label>
+        </div>
+      </div>
+      <div class="divTexto">
+        <p>Aqui sairá o texto codificado ou decodificado:</p>
+      </div>
+      <div class="divText">
+        <span id="textArea"></span>
+      </div>
+    </form>
 
-            <div class="divButton">
-            <button type="submit" value="Enviar" id="enviar">Codificar</button>
-            </div>
+    <div class="divButton">
+      <button type="submit" value="Enviar" id="enviar">Codificar</button>
+    </div>
+    <div class="divImg">
+      <img src="./assests/img/julio.jpg" alt="" oninput="envioDados()" />
+    </div>
 
-            <div class="divImg">
-            <img src="./assests/img/julio.jpg" alt="" oninput="envioDados()" />
-            </div>
-
-            <script src="./assests/js/script.js"></script>
+    <script src="./assests/js/script.js"></script>
   </body>
 </html>

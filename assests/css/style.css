@@ -1,3 +1,4 @@
+/* Import para fonte do texto */
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Source+Code+Pro:ital,wght@1,500&display=swap");
 /* Estrutura da página */
 * {
@@ -9,8 +10,11 @@
 }
 
 body {
-  background-image: linear-gradient(#b11111c4,black);
-  background-repeat:repeat;
+  background-image: linear-gradient(#b11111c4, black);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
   font-size: 15px;
   display: flex;
   flex-direction: column;
@@ -22,6 +26,10 @@ html,
 body {
   width: 100%;
   height: 100%;
+}
+
+.container{
+    border: 1px solid;
 }
 
 /* Header para ajuste */
@@ -38,6 +46,7 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  
   padding: 10px;
   margin: 10px;
 }
@@ -58,7 +67,8 @@ header {
 input {
   border: none;
   border-radius: 5px;
-  padding: 5px;
+  padding: 7px;
+  margin: 7px;
 }
 
 /* Ajuste do Radio button */
@@ -71,7 +81,7 @@ input {
 }
 
 .inputRadio {
-  margin: 10px 0;
+  margin: 10px;
   padding: 10px;
 }
 
@@ -85,6 +95,7 @@ p {
   align-items: center;
   flex-direction: column;
   display: flex;
+
   padding: 15px;
   margin-top: 10px;
   border-radius: 10px;
@@ -111,7 +122,6 @@ img {
 }
 
 /* Ajuste do botão */
-
 .divButton {
   display: flex;
   align-items: center;
@@ -127,34 +137,15 @@ button {
   font-family: "Source Code Pro", monospace;
 }
 
-
 button:hover {
   transition: 2s;
 }
 
-/* Em caso de erro ou acerto de preenchimento */
-.div-input-error {
-  width: 80%;
+/* Ajuste do incremento/decremento  */
+.slide {
   display: flex;
-  flex-direction: column;
-}
-
-.div-input-error .labelInput {
-  color: red;
-}
-
-.div-input-set {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-}
-
-.div-input-set span {
-  color: #2e770f;
-}
-
-.div-input-set .labelInput {
-  border-color: #2e770f;
+  flex-direction: row;
+  padding: 10px;
 }
 
 /* Ajuste do Select */
@@ -178,7 +169,6 @@ button:hover {
     justify-content: center;
     text-align: center;
   }
-
   .divForm {
     padding: 15px 0;
   }
@@ -189,12 +179,44 @@ button:hover {
   .divRadioButton {
     padding: 15px 0;
   }
-
   .divButton {
     padding: 15px 0;
   }
-
   .divImg {
     padding: 10px 0;
+  }
+  .slide {
+    padding: 10px;
+  }
+}
+
+/* Responsividade formulário tablet*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 15px;
+    text-align: center;
+  }
+  header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .divForm {
+    padding: 15px;
+  }
+  .divText {
+    padding: 15px;
+  }
+  .divRadioButton {
+    padding: 15px;
+  }
+  .divButton {
+    padding: 15px;
+  }
+  .divImg {
+    padding: 10px;
+  }
+  .slide {
+    padding: 10px;
   }
 }
