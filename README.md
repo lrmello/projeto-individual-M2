@@ -26,7 +26,7 @@ A ação de uma cifra de César é mover cada letra do alfabeto um número de ve
 
 Resumindo, a cifra de Cesar é capaz de trocar uma letra pela outra dividindo entre todo o alfabeto, aplicando a regra de crescer e decrescer conforme ordenação do alfabeto, visto no algoritmo original
 
-![Cifra](https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar#/media/Ficheiro:Caesar3.svg)
+ <img src=”https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar#/media/Ficheiro:Caesar3.svg”>
 
 Exemplo:
 
