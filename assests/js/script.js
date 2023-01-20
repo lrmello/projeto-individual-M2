@@ -6,6 +6,9 @@ const enviar = document.querySelector('#enviar')
 const select = document.querySelector('#selecionarMenu')
 const botaoR = document.querySelector('.divRadioButton')
 const botao = document.querySelector('#enviar')
+const code = (Programar) => btoa(Programar)
+const decode = (Programar) => atob(Programar)
+
 
 // Função para validação da cifra
 function envioDadosCifra(){
@@ -14,38 +17,37 @@ function envioDadosCifra(){
 
 // Função para validação da base64
 function envioDadosBase64(){
-    const text = document.querySelector('#textArea').value
-
+    const text = document.querySelector('#nameForms').value
+    let resultado
     if(cod.checked){
-        const cod = btoa(text)
-        return cod
+        resultado = code(text)
     }else if(decod.checked){
-        const decod = atob(cod)
-        return decod
+        resultado = decode(text)
     }
+
+    return resultado
 }
+
 
 // No click do botão, ele constará a opção correta que será decodificada ou codificada
 botaoR.addEventListener('click', function () {
         if (cod.checked) {
-            botao.innerHTML = 'Codificado'
+            botao.innerHTML = 'Codificar'
         } else if (decod.checked) {
-            botao.innerHTML = 'Decodificado'
+            botao.innerHTML = 'Decodificar'
         }
  })
- 
-// Aqui está o registro do evento por único elemento com o click
-botao.addEventListener('click',(e)=>{
-    const selectValue = select.value
-    e.preventDefault()
-    if(selectValue === 'Base64'){
-        rest.innerHTML = envioDadosBase64()
-        msg.classList.toggle('adadkaj')
-    } else if(selectValue === 'Cifra de Cesar'){
-        rest.innerHTML = envioDadosCifra()
-}
-})
 
+// Converter texto para base64 ou cifra
+$('#enviar').on('click',()=>{
+    let selectValue = $('#selecionarMenu option:selected').text()
+    let rest = $('#textArea')
+    if(selectValue === 'Base64'){
+          rest.html(envioDadosBase64()) 
+     }else if(selectValue === 'Cifra de Cesar'){
+          rest.html(envioDadosCifra()) 
+    }
+})
 
 
 // valida se o usuário está preenchendo o nome de forma correta

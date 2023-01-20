@@ -9,12 +9,12 @@
 }
 
 body {
-  background-image: linear-gradient(#b11111c4, rgb(12, 12, 169));
-
+  background-image: linear-gradient(#b11111c4,black);
+  background-repeat:repeat;
   font-size: 15px;
   display: flex;
   flex-direction: column;
-  color: #f3e9e9;
+  color: azure;
   scroll-behavior: smooth;
 }
 
@@ -38,8 +38,8 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 15px;
-  margin: 15px;
+  padding: 10px;
+  margin: 10px;
 }
 
 /* Ajuste do input*/
@@ -48,7 +48,7 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  padding: 20px;
 }
 
 .labelInput {
@@ -58,6 +58,7 @@ header {
 input {
   border: none;
   border-radius: 5px;
+  padding: 5px;
 }
 
 /* Ajuste do Radio button */
@@ -120,11 +121,12 @@ img {
 }
 
 button {
-  width: 90px;
+  width: 120px;
   background-color: peru;
   border-radius: 20px;
   font-family: "Source Code Pro", monospace;
 }
+
 
 button:hover {
   transition: 2s;
