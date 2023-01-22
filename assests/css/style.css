@@ -67,8 +67,8 @@ header {
 input {
   border: none;
   border-radius: 5px;
-  padding: 7px;
-  margin: 7px;
+  padding: 10px;
+  margin: 10px;
 }
 
 /* Ajuste do Radio button */
@@ -94,6 +94,7 @@ p {
   color: black;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
   display: flex;
 
   padding: 15px;
@@ -102,7 +103,7 @@ p {
 
   background-color: white;
   height: 150px;
-  width: 300px;
+  width: 280px;
 }
 
 /* Ajuste da imagem */
@@ -146,6 +147,18 @@ button:hover {
   display: flex;
   flex-direction: row;
   padding: 10px;
+}
+
+.containerCh{
+  padding: 10px;
+}
+
+.chDefinir{
+  padding: 5px;
+}
+
+#base{
+  margin: 2%;
 }
 
 /* Ajuste do Select */
