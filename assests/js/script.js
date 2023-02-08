@@ -36,18 +36,19 @@ function envioDadosCifra() {
       }
     }
     return exit
+    
     // escolhendo decodificar (if estará sempre como true)
   } else if (decod.checked) {
 
     for(let j = 0;j < msgLength;j++){
         if(msgText.charCodeAt(j) >= 65 && msgText.charCodeAt(j) <= 90){
             // exit estará capturando a String na tabela ASCII validando as posições 65 a 90 (A até Z) considerando que não haverá diferenciação entre caracteres
-            exit += String.fromCharCode((msgText.charCodeAt(j) - 65 - key + 26) % 26 + 65)
+            exit += String.fromCharCode((msgText.charCodeAt(j) - 65 + key + 26) % 26 + 65)
         }else if(msgText.charCodeAt(j) >= 97 && msgText.charCodeAt(j) <= 122){
             // exit estará capturando a String na tabela ASCII validando as posições 97 a 122 (a até z) considerando que não haverá diferenciação entre caracteres
-            exit += String.fromCharCode((msgText.charCodeAt(j) - 97 - key + 26) % 26 + 97)
+            exit += String.fromCharCode((msgText.charCodeAt(j) - 97 + key + 26) % 26 + 97)
         }else{
-            exit += String.fromCharCode(msgText.charCodeAt(j))
+          exit += msgText[j];
         }
     }
     return exit
@@ -80,7 +81,7 @@ select.addEventListener("change", ()=>{
     if(select.value === "cifra"){
         inc[0].style.display = "flex"
         inc[1].style.display = "flex"
-    }else if(select.value != "cifra"){
+    }else if(select.value !== "cifra"){
         inc[0].style.display = "none"
         inc[1].style.display = "none"
     }
